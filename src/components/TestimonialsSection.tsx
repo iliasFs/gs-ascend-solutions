@@ -9,21 +9,21 @@ const testimonials = [
     name: 'Robert Johnson',
     role: 'Facility Manager, Skyline Tower',
     content:
-      'GS Ascend Solutions has been maintaining our elevators for over 5 years now. Their response time is excellent, and their technicians are both knowledgeable and professional. I highly recommend their services.',
+      "GS Ascend Solutions has been maintaining our elevators for over 5 years now. Their response time is excellent, and their technicians are both knowledgeable and professional. I highly recommend their services.",
   },
   {
     id: 2,
     name: 'Sarah Thompson',
     role: 'Property Manager, The Grand Residences',
     content:
-      'After switching to GS Ascend Solutions, we've seen a dramatic decrease in elevator downtime. Their preventive maintenance program has saved us thousands in potential repairs.',
+      "After switching to GS Ascend Solutions, we've seen a dramatic decrease in elevator downtime. Their preventive maintenance program has saved us thousands in potential repairs.",
   },
   {
     id: 3,
     name: 'Michael Chen',
     role: 'Building Supervisor, Tech Plaza',
     content:
-      'The team at GS Ascend was instrumental in modernizing our outdated elevator systems. The project was completed on time and on budget, with minimal disruption to our tenants.',
+      "The team at GS Ascend was instrumental in modernizing our outdated elevator systems. The project was completed on time and on budget, with minimal disruption to our tenants.",
   },
 ];
 
