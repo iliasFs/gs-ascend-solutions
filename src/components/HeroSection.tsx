@@ -49,7 +49,7 @@ const HeroSection = () => {
               Our Services
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button size="lg" variant="outline" className="text-lg text-white border-white hover:text-primary hover:bg-white">
+            <Button size="lg" variant="outline" className="text-lg text-black border-white hover:text-primary hover:bg-white">
               Contact Us
             </Button>
           </div>
