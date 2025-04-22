@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 
 const Contact = () => {
   useEffect(() => {
-    // Update title
+
     document.title = "Contact Us - GS Ascend Solutions";
     
     // Animation observer setup
@@ -133,7 +133,7 @@ const Contact = () => {
               </div>
               
               {/* Contact Form */}
-              <div>
+              <div id="quote-section">
                 <div className="bg-white p-8 rounded-lg shadow-sm">
                   <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
                   <ContactForm />

@@ -77,7 +77,7 @@ const Projects = () => {
     return () => {
       revealElements.forEach((el) => observer.unobserve(el));
     };
-  }, []);
+  }, [filteredProjects]);
 
   useEffect(() => {
     if (filter === 'all') {
@@ -183,7 +183,7 @@ const Projects = () => {
             <div className="max-w-4xl mx-auto">
               <div className="relative">
                 {/* Timeline line */}
-                <div className="absolute top-0 bottom-0 left-6 md:left-1/2 w-0.5 bg-primary transform -translate-x-1/2"></div>
+                <div className="absolute top-0 bottom-0 left-6 w-0.5 bg-primary transform -translate-x-1/2"></div>
                 
                 {/* Steps */}
                 <div className="space-y-12">
