@@ -21,25 +21,48 @@ const ContactForm = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
+  
+    try {
+      const response = await fetch('https://formspree.io/f/mnndqnkz', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+  
+      if (response.ok) {
+        toast({
+          title: "Message sent!",
+          description: "We'll get back to you as soon as possible.",
+        });
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: '',
+        });
+      } else {
+        toast({
+          title: "Error",
+          description: "Failed to send the message. Please try again later.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      console.error(error);
       toast({
-        title: "Message sent!",
-        description: "We'll get back to you as soon as possible.",
+        title: "Error",
+        description: "An unexpected error occurred. Please try again later.",
+        variant: "destructive",
       });
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        subject: '',
-        message: '',
-      });
+    } finally {
       setIsLoading(false);
-    }, 1500);
+    }
   };
 
   return (

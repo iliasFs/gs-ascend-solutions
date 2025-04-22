@@ -1,6 +1,7 @@
 
 import React, { useEffect, useRef } from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight} from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 
 const HeroSection = () => {
@@ -46,11 +47,11 @@ const HeroSection = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 reveal">
             <Button size="lg" className="text-lg">
-              Our Services
+              <Link to="/Services">Our Services</Link>
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button size="lg" variant="outline" className="text-lg text-black border-white hover:text-primary hover:bg-white">
-              Contact Us
+             <Link to="Contact">Contact Us</Link> 
             </Button>
           </div>
         </div>
